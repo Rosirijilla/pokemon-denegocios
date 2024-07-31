@@ -1,13 +1,22 @@
-//start here
+//start here 
 function startScreen() {
   const bgImage = new Image()
   bgImage.src = './img/startScreen.png'
+  document.querySelector("canvas").style.cursor="pointer"
   bgImage.onload = () => {
     c.drawImage(bgImage, 0, 0, canvas.width, canvas.height)
 
     let gameStarted = false
     document.addEventListener('keypress', () => {
       if(gameStarted) return
+      document.querySelector("canvas").style.cursor="context-menu"
+      animate()
+      gameStarted = true
+    })
+
+    document.addEventListener('click', () => {
+      if(gameStarted) return
+      document.querySelector("canvas").style.cursor="context-menu"
       animate()
       gameStarted = true
     })
@@ -139,7 +148,7 @@ function animateBattle() {
   battleAnimationId = window.requestAnimationFrame(animateBattle)
   battleBackground.draw()
 
-  console.log(battleAnimationId)
+  /* console.log(battleAnimationId) */
 
   renderedSprites.forEach((sprite) => {
     sprite.draw()
