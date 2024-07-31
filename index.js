@@ -69,6 +69,12 @@ villagerImg2.src = './img/villager2/fiscalizadora2.png'
 const oldManImg2 = new Image()
 oldManImg2.src = './img/oldMan2/fiscalizador3.png'
 
+const villagerImg3 = new Image()
+villagerImg3.src = './img/villager3/fiscalizadora2.png'
+
+const villagerImg4 = new Image()
+villagerImg4.src = './img/villager4/fiscalizadora2.png'
+
 charactersMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
     // 1026 === villager
@@ -86,7 +92,7 @@ charactersMap.forEach((row, i) => {
           },
           scale: 1,
           animate: true,
-          dialogue: ['Haz el F29...', 'O lo pagarás caro. 👹']
+          dialogue: ['Haz el F29...', 'O lo pagarás caro... hay multas e intereses.']
         })
       )
     }
@@ -105,7 +111,7 @@ charactersMap.forEach((row, i) => {
           },
           scale: 1,
           animate: true,
-          dialogue: ['No me mires feo que te cobro más impuestos. 😡']
+          dialogue: ['No me mires feo que te cobro más impuestos.<br>&nbsp;<br> Espera. Eso no lo diría un fiscalizador.']
         })
       )
     }
@@ -124,8 +130,68 @@ charactersMap.forEach((row, i) => {
             hold: 60
           },
           scale: 1,
+          animate: false,
+          dialogue: ['Desde aquí se ve mejor el mar...<br>&nbsp;<br> Tienes tu Declaración de Renta al día?  ', 'Estamos cerrando locales comerciales por no tener todo al día con el SII.']
+        })
+      )
+    }
+
+    // 1084 === villager2
+    else if (symbol === 1084) {
+      characters.push(
+        new Character({
+          position: {
+            x: j * Boundary.width + offset.x,
+            y: i * Boundary.height + offset.y
+          },
+          image: villagerImg2,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          scale: 1,
+          animate: false,
+          dialogue: ['Si tienes dudas sobre tu emprendimiento...<br>&nbsp;<br> Te aconsejo buscar un contador.', '¿Qué hará ese tipo allá? Creo que se escapó de una fiscalización.']
+        })
+      )
+    }
+
+    // 1012 === villager
+    if (symbol === 1012) {
+      characters.push(
+        new Character({
+          position: {
+            x: j * Boundary.width + offset.x,
+            y: i * Boundary.height + offset.y
+          },
+          image: villagerImg3,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          scale: 1,
           animate: true,
-          dialogue: ['Tienes tu Declaración de Renta al día?']
+          dialogue: ['No pases por las flores o te fiscalizaremos...']
+        })
+      )
+    }
+
+    // 1098 === villager2
+    else if (symbol === 1098) {
+      characters.push(
+        new Character({
+          position: {
+            x: j * Boundary.width + offset.x,
+            y: i * Boundary.height + offset.y
+          },
+          image: villagerImg4,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          scale: 1,
+          animate: false,
+          dialogue: ['Lo siento amigo, no podrás entrar. El local fue clausurado por el SII.']
         })
       )
     }

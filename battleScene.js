@@ -43,6 +43,12 @@ function initBattle() {
   renderedSprites = [draggle, emby]
   queue = []
 
+  const textoButtons = document.createElement('p')
+  textoButtons.className = "aClassName";
+  textoButtons.innerHTML = "Elige con el Mouse que ataque usar"
+  
+  document.querySelector('#attacksBox').append(textoButtons)
+
   emby.attacks.forEach((attack) => {
     const button = document.createElement('button')
     button.innerHTML = attack.name

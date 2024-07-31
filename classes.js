@@ -113,7 +113,7 @@ class Monster extends Sprite {
   }
 
   faint() {
-    document.querySelector('#dialogueBox').innerHTML = this.name + ' se desmayó!'
+    document.querySelector('#dialogueBox').innerHTML = this.name + (this.name=="Emprendedor"? ' fue multador por el fiscalizador por no tener su contabilidad al día.<br>&nbsp;<br>Contrata contabilidad en DeNegocios.cl' : ' se desmayó! <br>&nbsp;<br> Tienes, por ahora, tu contabilidad al día.<br>Deberías contratar contabilidad en DeNegocios.cl')
     gsap.to(this.position, {
       y: this.position.y + 20
     })
@@ -127,7 +127,7 @@ class Monster extends Sprite {
   attack({ attack, recipient, renderedSprites }) {
     document.querySelector('#dialogueBox').style.display = 'block'
     document.querySelector('#dialogueBox').innerHTML =
-      this.name + ' usó ' + attack.name
+      this.name + ' usó ' + attack.name + (this.name == "Emprendedor" ? attack.descripEmprendedor : attack.descripFiscalizador)
 
     let healthBar = '#enemyHealthBar'
     if (this.isEnemy) healthBar = '#playerHealthBar'
