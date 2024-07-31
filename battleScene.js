@@ -1,3 +1,20 @@
+//start here
+function startScreen() {
+  const bgImage = new Image()
+  bgImage.src = './img/startScreen.png'
+  bgImage.onload = () => {
+    c.drawImage(bgImage, 0, 0, canvas.width, canvas.height)
+
+    let gameStarted = false
+    document.addEventListener('keypress', () => {
+      if(gameStarted) return
+      animate()
+      gameStarted = true
+    })
+  }
+}
+
+//Juego Original
 const battleBackgroundImage = new Image()
 battleBackgroundImage.src = './img/battleBackground.png'
 const battleBackground = new Sprite({
@@ -123,7 +140,8 @@ function animateBattle() {
   })
 }
 
-animate()
+//animate()
+startScreen()
 // initBattle()
 // animateBattle()
 

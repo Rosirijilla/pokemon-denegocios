@@ -13,7 +13,7 @@ const monsters = {
     },
     animate: true,
     name: 'Emprendedor',
-    attacks: [attacks.Tackle, attacks.Fireball]
+    attacks: [attacks.Tacleada, attacks.BolaFuego]
   },
   Draggle: {
     position: {
@@ -30,6 +30,6 @@ const monsters = {
     animate: true,
     isEnemy: true,
     name: 'Fiscalizador SII',
-    attacks: [attacks.Tackle, attacks.Fireball]
+    attacks: [attacks.Tacleada, attacks.BolaFuego]
   }
 }

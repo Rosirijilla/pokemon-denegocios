@@ -63,6 +63,12 @@ villagerImg.src = './img/villager/fiscalizadora2.png'
 const oldManImg = new Image()
 oldManImg.src = './img/oldMan/fiscalizador3.png'
 
+const villagerImg2 = new Image()
+villagerImg2.src = './img/villager2/fiscalizadora2.png'
+
+const oldManImg2 = new Image()
+oldManImg2.src = './img/oldMan2/fiscalizador3.png'
+
 charactersMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
     // 1026 === villager
@@ -100,6 +106,26 @@ charactersMap.forEach((row, i) => {
           scale: 1,
           animate: true,
           dialogue: ['No me mires feo que te cobro más impuestos. 😡']
+        })
+      )
+    }
+
+    // 1050 === oldMan2
+    else if (symbol === 1050) {
+      characters.push(
+        new Character({
+          position: {
+            x: j * Boundary.width + offset.x,
+            y: i * Boundary.height + offset.y
+          },
+          image: oldManImg2,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          scale: 1,
+          animate: true,
+          dialogue: ['Tienes tu Declaración de Renta al día?']
         })
       )
     }

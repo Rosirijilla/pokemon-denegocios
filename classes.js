@@ -138,7 +138,7 @@ class Monster extends Sprite {
     recipient.health -= attack.damage
 
     switch (attack.name) {
-      case 'Fireball':
+      case 'BolaFuego':
         audio.initFireball.play()
         const fireballImage = new Image()
         fireballImage.src = './img/fireball.png'
@@ -185,7 +185,7 @@ class Monster extends Sprite {
         })
 
         break
-      case 'Tackle':
+      case 'Tacleada':
         const tl = gsap.timeline()
 
         let movementDistance = 20
