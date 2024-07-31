@@ -1,7 +1,7 @@
 //start here 
 function startScreen() {
   const bgImage = new Image()
-  bgImage.src = './img/startScreen.png'
+  bgImage.src = './img/portada-oficial.png'
   document.querySelector("canvas").style.cursor="pointer"
   bgImage.onload = () => {
     c.drawImage(bgImage, 0, 0, canvas.width, canvas.height)
