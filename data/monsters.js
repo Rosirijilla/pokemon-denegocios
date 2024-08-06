@@ -1,11 +1,11 @@
 const monsters = {
   Emby: {
     position: {
-      x: 280,
-      y: 325
+      x: 100,
+      y: 200
     },
     image: {
-      src: './img/empre.png'
+      src: './img/correcto.png'
     },
     frames: {
       max: 4,
@@ -17,15 +17,15 @@ const monsters = {
   },
   Draggle: {
     position: {
-      x: 800,
-      y: 100
+      x: 600,
+      y: -10
     },
     image: {
-      src: './img/fisca.png'
+      src: './img/fiscalizador-batalla.png'
     },
     frames: {
       max: 4,
-      hold: 30,
+      hold: 30
     },
     animate: true,
     isEnemy: true,

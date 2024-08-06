@@ -58,22 +58,22 @@ battleZonesMap.forEach((row, i) => {
 
 const characters = []
 const villagerImg = new Image()
-villagerImg.src = './img/villager/fiscalizadora2.png'
+villagerImg.src = './img/villager/fiscalizadora-3.png'
 
 const oldManImg = new Image()
-oldManImg.src = './img/oldMan/fiscalizador3.png'
+oldManImg.src = './img/oldMan/fiscalizador-3.png'
 
 const villagerImg2 = new Image()
-villagerImg2.src = './img/villager2/fiscalizadora2.png'
+villagerImg2.src = './img/villager2/fiscalizador-2.png'
 
 const oldManImg2 = new Image()
-oldManImg2.src = './img/oldMan2/fiscalizador3.png'
+oldManImg2.src = './img/oldMan2/fiscalizadora-1.png'
 
 const villagerImg3 = new Image()
-villagerImg3.src = './img/villager3/fiscalizadora2.png'
+villagerImg3.src = './img/villager3/fiscalizadora-2.png'
 
 const villagerImg4 = new Image()
-villagerImg4.src = './img/villager4/fiscalizadora2.png'
+villagerImg4.src = './img/villager4/fiscalizador-1.png'
 
 charactersMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
