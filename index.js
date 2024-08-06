@@ -216,16 +216,16 @@ const foregroundImage = new Image()
 foregroundImage.src = './img/foregroundObjects.png'
 
 const playerDownImage = new Image()
-playerDownImage.src = './img/frente.png'
+playerDownImage.src = './img/adelante-caminar.png'
 
 const playerUpImage = new Image()
-playerUpImage.src = './img/espalda.png'
+playerUpImage.src = './img/atras-caminar.png'
 
 const playerLeftImage = new Image()
-playerLeftImage.src = './img/izquierda.png'
+playerLeftImage.src = './img/izquierda-caminar.png'
 
 const playerRightImage = new Image()
-playerRightImage.src = './img/derecha.png'
+playerRightImage.src = './img/derecha-caminar.png'
 
 const player = new Sprite({
   position: {
