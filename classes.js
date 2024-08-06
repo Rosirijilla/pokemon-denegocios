@@ -95,7 +95,7 @@ class Monster extends Sprite {
     rotation = 0,
     isEnemy = false,
     name,
-    attacks
+    attacks,
   }) {
     super({
       position,
@@ -144,8 +144,8 @@ class Monster extends Sprite {
         fireballImage.src = './img/fireball.png'
         const fireball = new Sprite({
           position: {
-            x: this.position.x,
-            y: this.position.y
+            x: this.position.x+100,
+            y: this.position.y+50
           },
           image: fireballImage,
           frames: {
@@ -158,8 +158,8 @@ class Monster extends Sprite {
         renderedSprites.splice(1, 0, fireball)
 
         gsap.to(fireball.position, {
-          x: recipient.position.x,
-          y: recipient.position.y,
+          x: recipient.position.x+100,
+          y: recipient.position.y+50,
           onComplete: () => {
             // Enemy actually gets hit
             audio.fireballHit.play()
