@@ -25,7 +25,7 @@ function startScreen() {
 
 //Juego Original
 const battleBackgroundImage = new Image()
-battleBackgroundImage.src = './img/battleBackground.png'
+battleBackgroundImage.src = './img/fondo.png'
 const battleBackground = new Sprite({
   position: {
     x: 0,

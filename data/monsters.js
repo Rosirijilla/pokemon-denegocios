@@ -5,7 +5,7 @@ const monsters = {
       y: 200
     },
     image: {
-      src: './img/correcto.png'
+      src: './img/principal.png'
     },
     frames: {
       max: 4,
@@ -21,7 +21,7 @@ const monsters = {
       y: -10
     },
     image: {
-      src: './img/fiscalizador-batalla.png'
+      src: './img/villano.png'
     },
     frames: {
       max: 4,
