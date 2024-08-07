@@ -113,7 +113,7 @@ class Monster extends Sprite {
   }
 
   faint() {
-    document.querySelector('#dialogueBox').innerHTML = this.name + (this.name=="Emprendedor"? ' fue multador por el fiscalizador por no tener su contabilidad al día.<br>&nbsp;<br>Contrata contabilidad en DeNegocios.cl' : ' se desmayó! <br>&nbsp;<br> Tienes, por ahora, tu contabilidad al día.<br>Deberías contratar contabilidad en DeNegocios.cl')
+    document.querySelector('#dialogueBox').innerHTML = this.name + (this.name=="Emprendedor"? ' fue multador por el fiscalizador por no tener su contabilidad al día.<br>&nbsp;<br>Contrata contabilidad en un lugar confiable.' : ' se desmayó! <br>&nbsp;<br> Tienes, por ahora, tu contabilidad al día.<br>Deberías de todas formas tener un contador amigo.')
     gsap.to(this.position, {
       y: this.position.y + 20
     })

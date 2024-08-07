@@ -110,7 +110,7 @@ charactersMap.forEach((row, i) => {
           },
           scale: 1,
           animate: true,
-          dialogue: ['No me mires feo que te cobro más impuestos.<br>&nbsp;<br> Espera. Eso no lo diría un fiscalizador.']
+          dialogue: ['No me mires feo que te cobro más impuestos.<br>&nbsp;<br> Espera... Yo no soy un fiscalizador... solo me hago pasar por uno.']
         })
       )
     }
