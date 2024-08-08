@@ -74,6 +74,9 @@ villagerImg3.src = './img/villager3/fiscalizadora-2.png'
 const villagerImg4 = new Image()
 villagerImg4.src = './img/villager4/fiscalizador-1.png'
 
+const gallina = new Image()
+gallina.src = './img/gallina.png'
+
 charactersMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
     // 1026 === villager
@@ -194,6 +197,24 @@ charactersMap.forEach((row, i) => {
         })
       )
     }
+
+    //1015 === gallina
+    else if (symbol === 1015) {
+      characters.push(
+        new Character({
+          position: {
+            x: j * Boundary.width + offset.x,
+            y: i * Boundary.height + offset.y
+          },
+          image: gallina,
+          frames: {
+            max: 4,
+            hold: 60
+          },
+          scale: 1,
+          animate: true,
+          dialogue: ['Lo siento amigo, no podrás entrar. El local fue clausurado por el SII.']
+        }))}
 
     if (symbol !== 0) {
       boundaries.push(
