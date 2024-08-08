@@ -230,7 +230,7 @@ charactersMap.forEach((row, i) => {
 })
 
 const image = new Image()
-image.src = './img/mapa.png'
+image.src = './img/mapa2.png'
 
 const foregroundImage = new Image()
 foregroundImage.src = './img/foregroundObjects.png'
